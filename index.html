@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>1 лаба веб</title>
+    <link rel="icon" href="img/ico2.ico">
+    <style>
+        body {
+            background: #e9e6ee;
+            color: #000;
+            font-family: sans-serif;
+            font-size: 10px;
+            margin: 20px 50px 20px 50px;
+
+        }
+
+        .header {
+            background: MediumSlateBlue;
+            width: 33.33%;
+            height: 60px;
+            float: left;
+
+        }
+
+        .header h1 {
+            padding-top: 6px;
+            padding-left: 25px;
+
+        }
+
+
+        .container {
+            vertical-align: middle;
+            background: #0000;
+            margin: auto auto;
+            text-align: center;
+            width: 100%;
+            height: 500px;
+        }
+
+
+        .graph {
+
+            float: left;
+            width: 25%;
+            overflow-y: auto;
+            overflow-x: auto;
+            /*height: 600px;*/
+            height: 125%;
+            background-color: white;
+            line-height: 40px;
+
+        }
+
+        .table {
+
+            float: right;
+            width: 73%;
+            text-align: center;
+            height: 125%;
+            overflow-y: auto;
+            overflow-x: auto;
+            border: none;
+        }
+
+        .table th {
+            background-color: MediumSlateBlue
+        }
+
+        .table .coord_col {
+            width: 8vw;
+        }
+
+        .table .time_col {
+            width: 25vw;
+        }
+
+
+        .clear {
+            height: 10px;
+            clear: both;
+        }
+
+
+        .r_button {
+            width: 40px;
+            height: 20px;
+            color: #ffffff;
+            background-color: MediumSlateBlue;
+            border: none;
+        }
+
+        .r_button:hover {
+            background-color: #4e438a;
+        }
+
+
+        #res-table tr:nth-child(2n+3) {
+            font-size: medium;
+            background-color: MediumSlateBlue;
+        }
+
+        #res-table tr:nth-child(2n+2) {
+            font-size: medium;
+            background-color: white;
+        }
+
+        #res-table tr:nth-child(2n+3):hover {
+            font-size: medium;
+            background-color: #4e438a;
+        }
+
+        #res-table tr:nth-child(2n+2):hover {
+            font-size: medium;
+            background-color: #C6C6C6;
+        }
+
+        #res-table th {
+            font-size: medium;
+        }
+
+        .namer {
+            color: white;
+            background: MediumSlateBlue;
+            height: 40px;
+            line-height: 45px;
+        }
+
+        body form {
+            margin: 0;
+        }
+
+        body h2 {
+            margin: 0;
+        }
+
+        .header h2 {
+            padding-top: 23px;
+        }
+
+        .button {
+            height: 27px;
+            width: 80px;
+            color: #ffffff;
+            background-color: MediumSlateBlue;
+            border: none;
+        }
+
+        .button:hover {
+            background-color: #4e438a;
+        }
+
+        .text-error {
+            border: 1px solid #ff0000;
+        }
+
+        .error {
+            color: red;
+        }
+
+        .pressed-button{
+            background-color: #4e438a;
+        }
+
+
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <div class="header">
+        <h1 align="left" style="color: white;"> Кошкарбаев Никита</h1>
+    </div>
+
+    <div class="header" ; style="">
+        <h2 style="color: white;"> <? echo 'fef';?> Группа: P3210</h2>
+    </div>
+
+    <div class="header">
+        <h2 align="right" style="color: white; padding-right: 20px">Вариант №10112</h2>
+    </div>
+
+    <div class="clear">
+    </div>
+
+
+    <div class="graph">
+        <form method="post">
+
+            <h2 class="namer" style="width: 100%">График</h2>
+            <img style="background: white" src="img/graph.png" ; width=100%>
+
+            <form style="line-height: 40px">
+            <h2 class="namer" style="margin-top: 7px">Ввод данных</h2>
+
+
+                <span><b>X:</b></span>
+                <span class="xrad"><input name="xval" type="radio" value="-3" id="x_radio_1">-3</span>
+                <span class="xrad"><input name="xval" type="radio" value="-2" id="x_radio_2">-2</span>
+                <span class="xrad"><input name="xval" type="radio" value="-1" id="x_radio_3">-1</span>
+                <span class="xrad"><input name="xval" type="radio" value="0" id="x_radio_4">0</span>
+                <span class="xrad"><input name="xval" type="radio" value="1" id="x_radio_5">1</span>
+                <span class="xrad"><input name="xval" type="radio" value="2" id="x_radio_6">2</span>
+                <span class="xrad"><input name="xval" type="radio" value="3" id="x_radio_7">3</span>
+                <span class="xrad"><input name="xval" type="radio" value="4" id="x_radio_8">4</span>
+                <span class="xrad"><input name="xval" type="radio" value="5" id="x_radio_9">5</span>
+
+                <br>
+                <span><b>Y:</b></span>
+                <span class="ytext">
+      <input type="text" id="yval" name="yval" autocomplete="off" maxlength="12" placeholder="Введите число от -3 до 3..."
+             style="width: 300px;">
+    </span>
+
+                <br>
+                <span><b>R:</b></span>
+                <input type="button" class="r_button" id="r_button_1" value="1">
+                <input type="button" class="r_button" id="r_button_2" value="1.5">
+                <input type="button" class="r_button" id="r_button_3" value="2">
+                <input type="button" class="r_button" id="r_button_4" value="2.5">
+                <input type="button" class="r_button" id="r_button_5" value="3">
+
+                <br>
+                <input class="button" type="button" id="submit_button" value="Отправить">
+                <input class="button" type="reset" id="reset_button">
+            </form>
+        </form>
+
+
+    </div>
+
+    <div class="table" style="background: white">
+        <h2 class="namer">Таблица</h2>
+        <table id="res-table">
+            <tr>
+                <th class="coord_col">X</th>
+                <th class="coord_col">Y</th>
+                <th class="coord_col">R</th>
+                <th class="time_col">Текущее время</th>
+                <th class="time_col">Время выполнения</th>
+                <th class="time_col">Результат</th>
+            </tr>
+        </table>
+    </div>
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/main.js" type="text/javascript"></script>
+</body>
+</html>
